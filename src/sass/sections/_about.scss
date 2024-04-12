@@ -76,4 +76,15 @@
       }
     }
   }
+  .tech-stack-container{
+    display: flex;
+    gap: 16px;
+  }
+
+  #tech-stack{
+    border: 2px solid $dark-grey;
+    padding: 8px;
+    background-color: $dark-grey;
+    color: $primary-color;
+  }
 }
