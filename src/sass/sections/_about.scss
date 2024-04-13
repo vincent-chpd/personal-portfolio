@@ -42,9 +42,6 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-      overflow: hidden;
-
-
 
       @include respond(tab-port-sm) {
         align-items: center;
@@ -80,11 +77,8 @@
     }
   }
   .tech-stack-container{
+    display: flex;
     gap: 16px;
-    font-size: 14px;
-    width: 100%;
-    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent calc(100% - 16px));
-
   }
 
   #tech-stack{
@@ -92,51 +86,5 @@
     padding: 8px;
     background-color: $dark-grey;
     color: $primary-color;
-    width: 100px;
-    text-align: center;
-  }
-
-  #tech-stack-top{
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    animation: 20s linear infinite moveTechStackLeft;
-  }
-  #tech-stack-bottom{
-    display: flex;
-    margin-top: 16px;
-    -webkit-box-align: center;
-    align-items: center;
-    justify-content: flex-end;
-    animation: 20s linear infinite moveTechStackRight;
-  }
-
-  .tech-stack-row {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .first{
-    padding-right: 16px;
-  }
-
-  @keyframes moveTechStackLeft {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(calc(-100% - 30px));
-    }
-  }
-
-  @keyframes moveTechStackRight {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(calc(100% - 30px));
-    }
   }
 }
