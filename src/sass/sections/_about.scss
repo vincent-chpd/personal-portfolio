@@ -43,7 +43,6 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-      mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent calc(100% - 16px));
 
 
       @include respond(tab-port-sm) {
@@ -81,18 +80,19 @@
   }
   .tech-stack-container{
     margin-right: 16px;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent calc(100% - 16px));
+
   }
 
   .tech-stack-top {
     display: flex;
-    overflow: hidden;
     animation: 40s linear 0s infinite normal none running slideToLeft;
   }
 
   .tech-stack-bottom {
     display: flex;
     margin-top: 8px;
-    overflow: hidden;
     animation: 40s linear 0s infinite normal none running slideToRight;
   }
 
