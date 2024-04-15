@@ -25,12 +25,27 @@
         <h1 class="hero-title load-hidden">
           Hi, my name is <span class="text-color-main">Vincent</span> 👋
           <br />
-          <span style="font-size: 40px;">I'm a Front End Developer.</span>
+          <span class="highlight" style="font-size: 40px;">I'm a Front End Developer.</span>
         </h1>
-        <p class="hero-cta load-hidden">
+        <!-- <p class="hero-cta load-hidden">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
-        </p>
+        </p> -->
+        <div class="social-links-hero">
+          <a rel="noreferrer" href="https://www.linkedin.com/in/vincent-chpd/" target="_blank">
+            <i class="fa fa-linkedin fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://github.com/vincent-chpd" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
+          </a>
+        </div>
       </div>
+      <svg class="arrows">
+        <a href="#about">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </a>
+      </svg>
     </section>
 
     <section id="about">
@@ -47,6 +62,11 @@
                 src="./assets/IMG_8023.jpeg"
                 alt="Profile Image"
               />
+              <span class="d-flex mt-3">
+                <a  target="_blank" class="cta-btn cta-btn--resume" href="assets/VincentChaussepiedResume.pdf">
+                  View Resume
+                </a>
+              </span>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -59,19 +79,46 @@
               <div class="about-wrapper__info-text mt-5">
                 <p><strong>TECH STACK:</strong></p>
                 <div class="tech-stack-container">
-                  <div id="tech-stack">HTML</div>
-                  <div id="tech-stack">CSS/Sass</div>
-                  <div id="tech-stack">JavaScript</div>
-                  <div id="tech-stack">React</div>
-                  <div id="tech-stack">Ruby on Rails</div>
-                  <div id="tech-stack">SQL</div>
+
+                  <div class="tech-stack-top">
+                    <div class="tech-stack-first-row">
+                      <div class="tech-stack">HTML</div>
+                      <div class="tech-stack">CSS/Sass</div>
+                      <div class="tech-stack">JavaScript</div>
+                      <div class="tech-stack">React.js</div>
+                      <div class="tech-stack">Ruby</div>
+                      <div class="tech-stack">Rails</div>
+                    </div>
+                    <div class="tech-stack-row">
+                      <div class="tech-stack">HTML</div>
+                      <div class="tech-stack">CSS/Sass</div>
+                      <div class="tech-stack">JavaScript</div>
+                      <div class="tech-stack">React.js</div>
+                      <div class="tech-stack">Ruby</div>
+                      <div class="tech-stack">Rails</div>
+                    </div>
+                  </div>
+
+                  <div class="tech-stack-bottom">
+                    <div class="tech-stack-first-row">
+                      <div class="tech-stack">Vue.js</div>
+                      <div class="tech-stack">Heroku</div>
+                      <div class="tech-stack">Node.js</div>
+                      <div class="tech-stack">SQL</div>
+                      <div class="tech-stack">Bootstrap</div>
+                      <div class="tech-stack">Git</div>
+                    </div>
+                    <div class="tech-stack-row">
+                      <div class="tech-stack">Vue.js</div>
+                      <div class="tech-stack">Heroku</div>
+                      <div class="tech-stack">Node.js</div>
+                      <div class="tech-stack">SQL</div>
+                      <div class="tech-stack">Bootstrap</div>
+                      <div class="tech-stack">Git</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <span class="d-flex mt-3">
-                <a  target="_blank" class="cta-btn cta-btn--resume" href="assets/VincentChaussepiedResume.pdf">
-                  View Resume
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -136,7 +183,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Bark buddies</h3>
+                <h3 class="project-wrapper__text-title">Bark Buddies</h3>
                 <div>
                   <p class="mb-4">
                     Social web app for dog owners built on Ruby on Rails. Integrated UI responsiveness through JavaScript, Stimulus.js, Sass,
