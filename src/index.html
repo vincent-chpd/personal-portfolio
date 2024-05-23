@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-    <title>Vincent | Web Developer</title>
+    <title>Vincent | Software Developer</title>
 
     <meta
       name="keywords"
-      content="[vincent-chpd], [Vincent], Front-end Developer"
+      content="[vincent-chpd], [Vincent], Software Developer"
     />
-    <meta name="description" content="[Vincent Chaussepied] | Developer" />
+    <meta
+      name="description"
+      content="[Vincent Chaussepied] | Software Developer"
+    />
 
     <link
       rel="stylesheet"
@@ -26,25 +29,27 @@
   </head>
 
   <body>
-    <div id="top">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <section id="hero" class="jumbotron">
-      <div class="container">
-        <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Vincent</span> 👋
-          <br />
-          <span class="highlight" style="font-size: 40px"
-            >I'm a Junior Web Developer.</span
-          >
-        </h1>
-        <!-- <p class="hero-cta load-hidden">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
-        </p> -->
-        <div class="social-links-hero project-wrapper__image load-hidden">
+    <div class="blob"></div>
+    <div class="parent-hero">
+      <div class="container hero-container">
+        <div class="flex hero-content">
+          <div class="content section-title load-hidden">
+            <h1>
+              Hello World! I'm
+              <span class="textmarker-effect">Vincent</span>, a junior
+              <span class="textmarker-effect">software developer</span> with a
+              passion for the
+              <span class="textmarker-effect">front-end </span>development from
+              <span class="textmarker-effect">London</span>.
+            </h1>
+          </div>
+          <img
+            src="../src/assets/avatar.png"
+            class="avatar-img project-wrapper__image load-hidden"
+            alt="avatar of myself"
+          />
+        </div>
+        <div class="social-links project-wrapper__text">
           <a
             rel="noreferrer"
             href="https://www.linkedin.com/in/vincent-chpd/"
@@ -59,94 +64,153 @@
           >
             <i class="fa fa-github fa-inverse"></i>
           </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="mailto:vincent.chaussepied@gmail.com"
+          >
+            <i class="fa fa-envelope fa-inverse"></i>
+          </a>
         </div>
       </div>
-      <svg class="arrows">
-        <a href="#about">
+      <a href="#about"
+        ><svg class="arrows">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
-          <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </a>
-      </svg>
-    </section>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path></svg
+      ></a>
+    </div>
 
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img
-                alt="Profile Image"
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="./assets/IMG_8023.jpeg"
-                alt="Profile Image"
-              />
-              <span class="d-flex mt-3">
-                <a
-                  target="_blank"
-                  class="cta-btn cta-btn--resume"
-                  href="assets/VincentChaussepiedResume.pdf"
-                >
-                  View Resume
-                </a>
-              </span>
-            </div>
+    <nav>
+      <div class="navbar-container">
+        <h2></h2>
+        <ul class="navbar-links">
+          <a href="#about" class="cta-btn cta-btn--resume"><li>About</li></a>
+          <a href="#projects" class="cta-btn cta-btn--resume"
+            ><li>Projects</li></a
+          >
+          <a href="#contact" class="cta-btn cta-btn--resume"
+            ><li>Contact</li></a
+          >
+        </ul>
+      </div>
+    </nav>
+    <section id="about" class="container">
+      <h2 class="section-title load-hidden">
+        <span class="textmarker-effect">About me</span>
+      </h2>
+      <div class="row about-wrapper">
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__image load-hidden">
+            <p class="about-wrapper__info-text">
+              Originally from France, I moved to the UK 15 years ago and never
+              looked back.<br />
+              <br />
+              My coding journey began as a self-taught adventure, and I recently
+              graduated from Le Wagon bootcamp, mastering web development
+              fundamentals and diving into Ruby on Rails and React. Well-versed
+              in HTML, CSS, and JavaScript (ES6), I love creating sleek,
+              responsive web applications. <br />
+            </p>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info load-hidden">
-              <p class="about-wrapper__info-text">
-                Aspiring Junior Web Developer passionate about building
-                front-end experiences! Switching from events management, I'm
-                excited to start a new career in web development. I bring strong
-                social skills and love working with others. Check out my work
-                below and don't hesitate to drop me a line if you wish to chat
-                about my career goals. Ready to dive into new opportunities in
-                tech! 💻🤓
-              </p>
-              <div class="about-wrapper__info-text mt-5">
-                <p><strong>TECH STACK:</strong></p>
-                <div class="tech-stack-container">
-                  <div class="tech-stack-top">
-                    <div class="tech-stack-first-row">
-                      <div class="tech-stack">HTML</div>
-                      <div class="tech-stack">CSS/Sass</div>
-                      <div class="tech-stack">JavaScript</div>
-                      <div class="tech-stack">React.js</div>
-                      <div class="tech-stack">Ruby</div>
-                      <div class="tech-stack">Rails</div>
-                    </div>
-                    <div class="tech-stack-row">
-                      <div class="tech-stack">HTML</div>
-                      <div class="tech-stack">CSS/Sass</div>
-                      <div class="tech-stack">JavaScript</div>
-                      <div class="tech-stack">React.js</div>
-                      <div class="tech-stack">Ruby</div>
-                      <div class="tech-stack">Rails</div>
-                    </div>
-                  </div>
-
-                  <div class="tech-stack-bottom">
-                    <div class="tech-stack-first-row">
-                      <div class="tech-stack">Vue.js</div>
-                      <div class="tech-stack">Heroku</div>
-                      <div class="tech-stack">Node.js</div>
-                      <div class="tech-stack">SQL</div>
-                      <div class="tech-stack">Bootstrap</div>
-                      <div class="tech-stack">Git</div>
-                    </div>
-                    <div class="tech-stack-row">
-                      <div class="tech-stack">Vue.js</div>
-                      <div class="tech-stack">Heroku</div>
-                      <div class="tech-stack">Node.js</div>
-                      <div class="tech-stack">SQL</div>
-                      <div class="tech-stack">Bootstrap</div>
-                      <div class="tech-stack">Git</div>
-                    </div>
-                  </div>
-                </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__info load-hidden">
+            <img
+              alt="Profile Image"
+              class="img-fluid rounded shadow-lg"
+              height="auto"
+              width="300px"
+              src="./assets/IMG_8023.jpeg"
+              alt="Profile Image"
+            />
+            <span class="d-flex mt-3">
+              <a
+                target="_blank"
+                class="cta-btn cta-btn--resume"
+                href="assets/VincentChaussepiedResume.pdf"
+              >
+                View Resume
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="tech-stack-container">
+          <div class="tech-stack-bottom">
+            <div class="tech-stack-first-row">
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-css-131-722685.png?f=webp&w=512"
+                  alt="css logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-html-3628838-3030115.png?f=webp&w=512"
+                  alt="html logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-typescript-1174965.png?f=webp&w=512"
+                  alt="typescript logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-1-226034.png?f=webp&w=512"
+                  alt="node logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-react-3521666-2945110.png?f=webp&w=512"
+                  alt="react logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-sass-3521691-2945135.png?f=webp&w=512"
+                  alt="sass logo"
+                />
+              </div>
+            </div>
+            <div class="tech-stack-row">
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-css-131-722685.png?f=webp&w=512"
+                  alt="css logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-html-3628838-3030115.png?f=webp&w=512"
+                  alt="html logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-typescript-1174965.png?f=webp&w=512"
+                  alt="typescript logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-1-226034.png?f=webp&w=512"
+                  alt="node logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-react-3521666-2945110.png?f=webp&w=512"
+                  alt="react logo"
+                />
+              </div>
+              <div class="tech-stack">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-512/free-sass-3521691-2945135.png?f=webp&w=512"
+                  alt="sass logo"
+                />
               </div>
             </div>
           </div>
@@ -157,7 +221,9 @@
     <section id="projects">
       <div class="container">
         <div class="project-wrapper">
-          <h2 class="section-title text-color-main">Projects</h2>
+          <h2 class="section-title">
+            <span class="textmarker-effect">Projects</span>
+          </h2>
 
           <!--------- POKECARD APP --------->
           <div class="row">
@@ -212,7 +278,11 @@
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
+                <a
+                  rel="noreferrer"
+                  href="https://pokecard-app.netlify.app/"
+                  target="_blank"
+                >
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -427,7 +497,9 @@
 
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title">
+          <span class="textmarker-effect">Contact</span>
+        </h2>
         <div class="contact-wrapper load-hidden">
           <p class="contact-wrapper__text">
             Let's Build Something Awesome Together! <br />
@@ -436,7 +508,7 @@
               target="_blank"
               class="cta-btn cta-btn--resume mt-5"
               href="mailto:vincent.chaussepied@gmail.com"
-              >Message Me!</a
+              ><i class="fa fa-envelope fa-inverse"></i> Message Me!</a
             >
           </p>
         </div>
@@ -448,34 +520,10 @@
         <a rel="noreferrer" href="#top" class="back-to-top">
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
-        <div class="social-links">
-          <a
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/vincent-chpd/"
-            target="_blank"
-          >
-            <i class="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a
-            rel="noreferrer"
-            href="https://github.com/vincent-chpd"
-            target="_blank"
-          >
-            <i class="fa fa-github fa-inverse"></i>
-          </a>
-        </div>
 
         <hr />
 
-        <p class="footer__text">
-          © 2024 - Developed by
-          <a
-            rel="noreferrer"
-            href="https://github.com/vincent-chpd"
-            target="_blank"
-            >Vincent Chaussepied</a
-          >
-        </p>
+        <p class="footer__text">© 2024 - Developed by Vincent Chaussepied</p>
       </div>
     </footer>
 

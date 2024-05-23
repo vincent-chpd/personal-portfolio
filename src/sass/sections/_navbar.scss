@@ -1,4 +1,30 @@
-.navbar{
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  color: white;
+  background-color: #000000bc;
+  z-index: 10000;
+}
+
+.navbar-container {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 22px;
+  margin: 20px 28px;
+}
+
+.navbar-links li {
+  list-style: none;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
 }

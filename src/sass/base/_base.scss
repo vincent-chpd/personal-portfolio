@@ -10,13 +10,14 @@ body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   scroll-behavior: smooth;
-  background-color: $dark-grey;
+  background-color: $black;
+  color: white;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -26,4 +27,16 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $primary-color;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+ul {
+  padding: 0;
 }

@@ -84,15 +84,17 @@
 
 /* Resume Style */
 .cta-btn--resume {
-  color: $dark-grey;
-  border: 2px solid $dark-grey;
+  color: $white;
+  border: none;
 
   &::after {
-    background: $dark-grey;
+    background-image: linear-gradient(to right, #a900a0 0%, transparent 0),
+      linear-gradient(transparent 20%, #a900a0 80%);
   }
 
   &:hover {
-    color: $primary-color;
+    color: white;
+    border: none;
     text-decoration: none;
 
     &::after {

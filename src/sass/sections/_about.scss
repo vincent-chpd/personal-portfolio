@@ -1,17 +1,21 @@
 #about {
   overflow: hidden;
-  background-color: $primary-color;
-  background-image: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    $secondary-color 100%
-  );
-  color: $dark-grey;
+  background: none;
+  color: $white;
   height: 100vh;
   border-top: 0px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
+  position: relative;
+  padding-top: 50px;
+
+  h2 {
+    font-size: 3.5vw;
+    margin-top: 50px;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
 
   @include respond(tab-land) {
     height: 100%;
@@ -44,7 +48,7 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-
+      align-items: center;
 
       @include respond(tab-port-sm) {
         align-items: center;
@@ -61,7 +65,7 @@
         }
 
         &--important {
-          background: darken($secondary-color, 1%);
+          background: darken($white, 1%);
           display: inline-block;
           font-style: italic;
           padding: 0 0.3rem;
@@ -79,11 +83,19 @@
       }
     }
   }
-  .tech-stack-container{
+  .tech-stack-container {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
     margin-right: 16px;
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent calc(100% - 16px));
-
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 16px,
+      #000 calc(100% - 32px),
+      transparent calc(100% - 16px)
+    );
   }
 
   .tech-stack-top {
@@ -97,10 +109,8 @@
     animation: 40s linear 0s infinite normal none running slideToRight;
   }
 
-  .tech-stack{
-    border: 2px solid $dark-grey;
+  .tech-stack img {
     padding: 8px;
-    background-color: $dark-grey;
     color: $primary-color;
     width: 100px;
     text-align: center;
@@ -108,13 +118,13 @@
     font-weight: 600;
   }
 
-  .tech-stack-row{
+  .tech-stack-row {
     display: flex;
     gap: 16px;
     align-items: center;
   }
 
-  .tech-stack-first-row{
+  .tech-stack-first-row {
     display: flex;
     gap: 16px;
     margin-right: 16px;
@@ -139,5 +149,27 @@
     100% {
       transform: translateX(0%);
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #about {
+    margin-bottom: 50px;
+  }
+
+  #about h2 {
+    font-size: 56px;
+  }
+
+  #about p {
+    font-size: 22px;
+  }
+
+  #about .tech-stack-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
   }
 }

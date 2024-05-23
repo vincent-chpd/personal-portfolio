@@ -1,197 +1,255 @@
-#hero {
-  min-height: 100vh;
-  height: 100vh;
+:root {
+  --clr-1: #1100ff;
+  --clr-2: #7f00fc;
+  --clr-3: #b300f9;
+  --clr-4: #dc00f5;
+  --clr-5: #ff00f2;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.blob {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-bottom: 0px;
-  background: url("./assets/hero-page.jpg");
-  background-position: center;
-  background-size: cover;
-  font-weight: 400;
-  color: white;
-  padding: 0rem 5.6rem;
-  margin-bottom: 0;
-  top: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  background-image: linear-gradient(#1100ff 10%, #ff00f2);
+  filter: blur(250px);
+  transition: all 450ms ease-out;
+  position: fixed;
+  pointer-events: none;
   left: 0;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
   z-index: -1;
+}
 
+.parent-hero {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-content: center;
+}
 
-  @include respond(phone) {
-    padding: 0rem $default-font-size;
+.hero-container {
+  height: 98vh;
+  min-width: 99vw;
+  background: black;
+  border-radius: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container::before,
+.hero-container::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  filter: blur(250px);
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5)
+  );
+  border-radius: inherit;
+  animation: rotation 10s linear infinite;
+}
+
+.hero-container::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
   }
-
-  .hero-title {
-    font-size: 5.6rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: left;
-
-    @include respond(tab-land) {
-      font-size: 4rem;
-    }
-    @include respond(tab-port) {
-      font-size: 3.6rem;
-      text-align: center;
-    }
-    @include respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.8rem;
-    }
-  }
-
-  .hero-cta {
-    display: flex;
-
-    @include respond(tab-port) {
-      justify-content: center;
-    }
-
-    & a {
-      font-size: 2.4rem;
-
-      @include respond(phone) {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  .social-links-hero {
-    display: flex;
-    flex-direction: row;
-
-    a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $white-color;
-      font-size: 3rem;
-      width: 5rem;
-      height: 5rem;
-      margin: 16px 16px 16px  0;
-
-      transition: all 0.2s ease-in;
-
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: #f37d35 0px 0px 10px;
-      }
-    }
-  }
-
-
-
-  .arrows {
-    width: 60px;
-    height: 72px;
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    bottom: 20px;
-  }
-
-  .arrows path {
-    stroke: #f37d35;
-    fill: transparent;
-    stroke-width: 1px;
-    animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite;
-  }
-
-  @keyframes arrow
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-
-  @-webkit-keyframes arrow /*Safari and Chrome*/
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-
-  .arrows path.a1 {
-    animation-delay:-1s;
-    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-  }
-
-  .arrows path.a2 {
-    animation-delay:-0.5s;
-    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-  }
-
-  .arrows path.a3 {
-    animation-delay:0s;
-    -webkit-animation-delay:0s; /* Safari 和 Chrome */
-  }
-
-  strong {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -0.125rem;
-      left: -0.5rem;
-      right: -0.5rem;
-      height: 0.75rem;
-
-      // Position the line behind the text so that
-      // it is still easily readable
-      z-index: -1;
-
-      // The SVG is added as an SVG background image
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
-      background-repeat: no-repeat;
-
-      // This allows the SVG to flex in size to fit
-      // any length of word. If the word is short,
-      // the SVG will be stretched vertically, if it
-      // is long, the SVG will be stretched horizontally.
-      // The jagged nature of this particular SVG works
-      // with this transforming.
-      background-size: cover;
-    }
-  }
-
-  p > strong {
-    font-weight: 400;
-
-    &::after {
-      // Specific positioning for smaller text
-      bottom: -0.2rem;
-      height: 0.5rem;
-      left: -0.25rem;
-      right: -0.25rem;
-    }
+  100% {
+    --gradient-angle: 360deg;
   }
 }
 
-#top{
+.social-links {
   display: flex;
-  gap: 32px;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 32px;
+  flex-direction: row;
   position: absolute;
-  top: 0;
-  right: 0;
-  a {
-    width: 100px;
-    color: #f37d35;
-    border-bottom: #f37e3500 2px solid;
-    &:hover {
-      font-weight: 600;
-      border-bottom: #f37d35 2px solid;
-    }
+  bottom: 160px;
+  right: 148px;
+}
+
+.social-links i {
+  font-size: 38px;
+}
+
+.social-links i:hover {
+  animation-name: highlight;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  background-size: 200%;
+  background-image: linear-gradient(to right, rgb(0, 0, 0) 30%, transparent 60%),
+    linear-gradient(transparent 50%, #a900a0 50%);
+}
+
+.avatar-img {
+  max-width: 600px;
+  width: 50vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0 0 0 100px;
+  max-width: 50%;
+}
+
+.content h1 {
+  font-size: 3.5vw;
+  text-align: left;
+}
+
+.buttons a:nth-child(1) {
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.buttons a:nth-child(2) {
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 700px) {
+  .content-parent {
+    width: 90%;
   }
 
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .buttons a {
+    padding: 6px 1rem;
+  }
+}
+
+.textmarker-effect {
+  animation-name: highlight;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  background-size: 200%;
+  background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, transparent 60%),
+    linear-gradient(transparent 50%, #a900a0 50%);
+}
+
+@keyframes highlight {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -100%;
+  }
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 45%;
+  bottom: 55px;
+}
+
+.arrows path {
+  stroke: #a900a0;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+@media only screen and (max-width: 1024px) {
+  .avatar-img {
+    display: none;
+  }
+  .hero-content {
+    justify-content: center;
+  }
+  .content {
+    margin: 80px;
+    max-width: 80%;
+  }
+  .content h1 {
+    font-size: 64px;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+    left: 100px;
+  }
+
+  .social-links i {
+    font-size: 48px;
+  }
 }
