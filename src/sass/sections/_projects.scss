@@ -1,6 +1,7 @@
 #projects {
   background: none;
   color: $white-color;
+  scroll-snap-align: start;
 
   h2 {
     margin-top: 50px;
@@ -66,6 +67,10 @@
     width: 430px;
     height: auto;
   }
+}
+
+.img-fluid {
+  border-radius: 8px;
 }
 
 .img-fluid-small {
