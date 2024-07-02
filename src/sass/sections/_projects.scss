@@ -94,3 +94,28 @@
   overflow: hidden;
   border: none !important;
 }
+
+@media screen and (max-width: 1024px) {
+  #projects {
+    h2 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .project-wrapper__text-title {
+    border-top: 1px solid white;
+    padding-top: 22px;
+  }
+
+  .img-fluid-small {
+    height: 350px;
+  }
+
+  #barkbuddies-chat {
+    display: none;
+  }
+}

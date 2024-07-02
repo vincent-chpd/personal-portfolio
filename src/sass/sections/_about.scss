@@ -59,7 +59,7 @@
           text-align: left;
         }
         @include respond(tab-port-sm) {
-          text-align: center;
+          text-align: left;
         }
 
         &--important {
@@ -152,22 +152,27 @@
 
 @media only screen and (max-width: 1024px) {
   #about {
-    margin-bottom: 50px;
+    padding: 0 18px;
   }
 
   #about h2 {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   #about p {
-    font-size: 22px;
+    font-size: 18px;
+    text-align: start;
   }
 
   #about .tech-stack-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    position: absolute;
-    bottom: -30px;
-    left: 0;
+    bottom: -75px;
+  }
+
+  #about .tech-stack img {
+    width: 60px;
+  }
+
+  .cta-btn cta-btn--resume {
+    text-decoration: underline;
   }
 }
