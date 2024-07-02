@@ -7,6 +7,15 @@
     margin-top: 50px;
     font-size: 3.5vw;
   }
+
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
+
   @include respond(tab-land) {
     margin-top: 0;
     padding-top: 5rem;
